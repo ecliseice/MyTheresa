@@ -4,6 +4,7 @@ import { getMovieDetails } from "../api/movies";
 import { useWishlist } from "../hooks/useWishlist";
 import "../styles/pages/Detail.scss";
 import type { Movie } from "../types/movie.ts";
+import MovieSkeleton from "../components/MovieSkeleton";
 
 const DetailPage = () => {
     const { id } = useParams<{ id: string }>();
@@ -23,7 +24,7 @@ const DetailPage = () => {
             "Detail";
     }, [ movie ]);
 
-    if ( !movie ) return <p>Loading...</p>;
+    if ( !movie ) return <MovieSkeleton />;
 
     return (
         <div className="detail_page">

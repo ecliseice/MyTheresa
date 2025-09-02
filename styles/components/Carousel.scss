@@ -33,26 +33,4 @@
       background: linear-gradient(90deg, #444, #777);
     }
   }
-
-  &__item {
-    min-width: 140px;
-
-    text-align: center;
-    transition: transform 0.2s ease-in-out;
-    cursor: pointer;
-
-    &:hover {
-      transform: scale(1.05);
-    }
-
-    img {
-      width: 100%;
-      border-radius: 5px;
-    }
-
-    p {
-      font-size: 0.9rem;
-      color: $nav-bg;
-    }
-  }
 }

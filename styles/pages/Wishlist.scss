@@ -1,0 +1,64 @@
+@use "../variables" as *;
+
+.wishlist {
+  padding: 10px;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px;
+  }
+
+  &__card {
+    background: $nav-bg;
+    border-radius: 10px;
+    overflow: hidden;
+
+    h3 {
+      margin: 10px 0 0;
+      padding: 0 8px;
+
+      font-size: 1rem;
+      font-weight: 600;
+      color: #333;
+      text-align: center;
+    }
+  }
+
+  &__poster {
+    position: relative;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+
+      border-radius: 10px 10px 0 0;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+  }
+
+  &__remove {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 0;
+
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 1.4rem;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.2);
+      color: #ff5a5f;
+    }
+  }
+}
